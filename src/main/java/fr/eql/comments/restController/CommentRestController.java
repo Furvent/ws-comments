@@ -54,6 +54,7 @@ public class CommentRestController {
 			return new ResponseEntity<>(HttpStatus.OK);
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -75,6 +76,7 @@ public class CommentRestController {
 					.stream().map(comment -> new CommentToDisplay(comment)).collect(Collectors.toList());
 			return new ResponseEntity<List<CommentToDisplay>>(listCommentsToDisplay, HttpStatus.OK);
 		} catch(Exception e) {
+			e.printStackTrace();
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
