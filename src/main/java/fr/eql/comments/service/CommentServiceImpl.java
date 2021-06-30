@@ -10,10 +10,13 @@ import fr.eql.comments.repository.CommentRepository;
 
 @Service
 public class CommentServiceImpl implements CommentService {
-	
-	@Autowired
+
 	private CommentRepository repository;
 
+	public CommentServiceImpl(CommentRepository repository) {
+		this.repository = repository;
+	}
+	
 	@Override
 	public Comment save(Comment comment) {
 		return repository.save(comment);

@@ -19,5 +19,9 @@ public class CommentToDisplay {
 		this.author = comment.getAuthor();
 		this.creationDate = comment.getCreationDate();
 	}
+	
+	public CommentToDisplay() {
+		
+	}
 
 }
